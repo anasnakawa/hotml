@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/anasnakawa/hotml/issues"
   },
-  "homepage": "https://github.com/anasnakawa/hotml"
+  "homepage": "https://github.com/anasnakawa/hotml",
+  "dependencies": {
+    "cheerio": "^0.13.1"
+  }
 }
