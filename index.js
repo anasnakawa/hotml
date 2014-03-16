@@ -25,13 +25,13 @@ function parseString( input, callback ) {
  */
 
 function parseFile( path, callback ) {
-	fs.readFile( path, function( e, file ) {
-		if( e ) {
-			return callback( e, null );
-		}
+  fs.readFile( path, function( e, file ) {
+    if( e ) {
+      return callback( e, null );
+    }
 
-		parseString( content, callback );
-	});
+    parseString( content, callback );
+  });
 }
 
 module.exports.parseString = parseString;
