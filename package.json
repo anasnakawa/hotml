@@ -1,0 +1,27 @@
+{
+  "name": "hotml",
+  "version": "0.0.0",
+  "description": "writing html in a hot way",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anasnakawa/hotml.git"
+  },
+  "keywords": [
+    "hot",
+    "html",
+    "component",
+    "markup",
+    "oop",
+    "object-oriented"
+  ],
+  "author": "anas.nakawa@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anasnakawa/hotml/issues"
+  },
+  "homepage": "https://github.com/anasnakawa/hotml"
+}
