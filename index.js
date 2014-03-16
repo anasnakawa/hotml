@@ -4,7 +4,8 @@
 // License: MIT (http://www.opensource.org/licenses/mit-license.php)
 // -----------------------------------------------------------------
 
-var fs = require( 'fs' );
+var fs = require( 'fs' )
+  , hotml = require( './lib/hotml' );
 
 /**
  * Parse given `hotml` string into html
