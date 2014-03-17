@@ -15,7 +15,7 @@ var fs = require( 'fs' )
  */
 
 function parseString( input, callback ) {
-
+  console.log( hotml( input ) );
 }
 
 /**
@@ -31,9 +31,17 @@ function parseFile( path, callback ) {
       return callback( e, null );
     }
 
-    parseString( content, callback );
+    parseString( file.toString(), callback );
   });
 }
 
-module.exports.parseString = parseString;
-module.exports.parseFile = parseFile;
+/**
+ * expose parsing methods
+ */
+
+module.exports = {
+    parseString: parseString
+  , parseFile: parseFile
+}
+
+parseFile( './test/hotml/index.hotml' );
