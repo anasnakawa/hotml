@@ -1,3 +1,4 @@
+
 <import src="alert" />
 
-<bs-alert></bs-alert>
+<alert></alert>

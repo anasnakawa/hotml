@@ -1,4 +1,5 @@
-<define tag-name="bs-alert">
+
+<define tag-name="alert">
   <div class="alert alert-success">
     <h1>Congrats!</h1>
   </div>
