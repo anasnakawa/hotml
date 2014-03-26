@@ -22,15 +22,20 @@ describe( 'basic hotml tree parsing', function() {
 describe( 'alert hotml file tree parsing', function() {
 	
 	it( 'should read alert hotml file', function() {
-		var alert_hotml = fs.readFileSync( './test/hotml/alert.hotml' ).toString();
+		alert_hotml = fs.readFileSync( './test/hotml/alert.hotml' ).toString();
 		expect( typeof alert_hotml ).to.equal( 'string' );
 	});
 
 	it( 'should correctly parse alert hotml file', function() {
-		var alert_tree = tree.parse( alert_hotml );
+		var _tree = tree.parse( alert_hotml );
 
-		expect( alert_tree.imports.length ).to.equal( 0 );
-		expect( alert_tree.definitions.length ).to.equal( 1 );
-		expect( alert_tree.plugins.length ).to.equal( 0 );
+		expect( _tree.imports.length ).to.equal( 0 );
+		expect( _tree.definitions.length ).to.equal( 1 );
+		expect( _tree.plugins.length ).to.equal( 0 );
+
+		var define = _tree.definitions[ 0 ];
+		expect( define.type ).to.equal( 'tag' );
+		expect( define.name ).to.equal( 'define' );
+		expect( define.attrs[ 'tag-name' ] ).to.equal( 'alert' );
 	});
 });
