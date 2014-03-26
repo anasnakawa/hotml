@@ -9,8 +9,30 @@ module.exports = function( grunt ) {
       }
     }
 
+    , concat: {
+      hotml: {
+        files: {}
+      }
+    }
+
     , clean: {
       tests: [ 'test/tmp' ]
+    }
+
+    , 'node-inspector': {
+      dev: {
+        options: {
+          'web-port': 1337,
+          'web-host': 'localhost'
+        }
+      }
+    }
+
+    , shell: {
+      debug: {
+          optoins: { stdout: true }
+        , command: 'node-debug $(which grunt) debug'
+      }
     }
 
   });
@@ -21,7 +43,11 @@ module.exports = function( grunt ) {
 
   // other
   grunt.loadNpmTasks( 'grunt-simple-mocha' );
+  grunt.loadNpmTasks( 'grunt-node-inspector' );
+  grunt.loadNpmTasks( 'grunt-shell' );
 
+  // tasks
   grunt.registerTask( 'mocha', [ 'simplemocha' ] );
+  grunt.registerTask( 'debug', [ 'node-inspector' ] );
   grunt.registerTask( 'travis', [ 'clean', 'simplemocha' ] );
 }
